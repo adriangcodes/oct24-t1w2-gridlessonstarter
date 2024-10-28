@@ -6,8 +6,44 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem 2rem;
+  grid-template-areas: 
+    "header"
+    "sidebar"
+    "content"
+    "footer";
 }
 
 .content {
   padding-top: 2rem;
+}
+
+header {
+  grid-area: header;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main {
+  grid-area: content;
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+  }
+  .content {
+    padding-top: 0px;
+  }
 }
