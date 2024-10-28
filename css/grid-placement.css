@@ -8,6 +8,8 @@ body {
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 200px;
+  grid-template-areas: "sidebar-top main main"
+                        "sidebar-bottom main main";
 }
 
 .card {
@@ -32,5 +34,5 @@ body {
   /* grid-row-start: 1;
   grid-row-end: 3; */
   /* grid-row: 1 / 3; */
-  grid-area: 1 / 2 / 3 / 4;
+  grid-area: main
 }
